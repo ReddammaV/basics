@@ -1,0 +1,19 @@
+<h3>ng Swtich Using HTML Tag</h3>
+<div [ngSwitch]="person">
+  <div *ngSwitchCase="'chandan'">Hello Chandan Sir</div>
+  <div *ngSwitchCase="'Ajeet'">Hello Ajeet</div>
+  <div *ngSwitchCase="'Rahul'">Hello Rahul</div>
+  <div *ngSwitchCase="'Deepak'">Hello Deepak</div>
+  <div *ngSwitchDefault>No Match</div>
+</div>
+
+<h3>ng Swtich Using Input Tag</h3>
+Input : <input type="text" #num (keyup)="0">
+<div [ngSwitch]="num.value">
+  <div *ngSwitchCase="'1'">Hello 1</div>
+  <div *ngSwitchCase="'2'">Hello 2</div>
+  <div *ngSwitchCase="'3'">Hello 3</div>
+  <div *ngSwitchCase="'4'">Hello 4</div>
+  <div *ngSwitchDefault>No Match</div>
+</div>
+

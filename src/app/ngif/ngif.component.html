@@ -1,0 +1,58 @@
+<h3>NgIf with HTML Element</h3>
+
+<div>NgIf with HTML Element</div>
+
+<div *ngIf="true">NgIf with HTML Element (with true)</div>
+<div *ngIf="false">NgIf with HTML Element (With false)</div>
+
+<div *ngIf="IsShow">NgIf with HTML Element (with true dynamic value {{IsShow}})</div>
+<div *ngIf="!IsShow">NgIf with HTML Element (With false dynamic value)</div>
+
+<h3>NgIf with radio button</h3>
+<div>
+  <input type="radio" name="val" (click)="changeValue(true)"> Male
+  <input type="radio" name="val" (click)="changeValue(false)"> FeMale
+
+  <div *ngIf="IsMale">
+    I am Male
+  </div>
+
+  <div *ngIf="!IsMale">
+    I am Female
+  </div>
+</div>
+
+<h3>NgIf with Null check</h3>
+<div>
+  My Name : {{emp1.name}} | My Mobile No : {{emp1.MobileNo}}
+</div>
+
+<div *ngIf="emp2">
+  My Name : {{emp2.name}} | My Mobile No : {{emp2.MobileNo}}
+</div>
+
+<div>
+  My Name : {{emp3.name}} | My Mobile No : {{emp3.MobileNo}}
+</div>
+
+<div *ngIf="emp4">
+  My Name : {{emp4.name}} | My Mobile No : {{emp4.MobileNo}}
+</div>
+
+<div *ngIf="numEnum.One <2">
+
+    2 is greater than {{numEnum.One}}
+    {{numEnum.Two}} is greater than {{numEnum.One}}
+  </div>
+
+  <h3>IsAdmin</h3>
+  <ng-template [ngIf]="IsAdmin" [ngIfThen]="thenBlock" [ngIfElse]="elseBlock"></ng-template>
+
+
+<ng-template #thenBlock>
+  I am ajeet
+</ng-template>
+
+<ng-template #elseBlock>
+  I am chandan
+</ng-template>

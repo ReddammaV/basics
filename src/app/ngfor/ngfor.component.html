@@ -1,0 +1,54 @@
+<h3>ngFor with html tag</h3>
+<span *ngFor="let data of personData">
+  Name : {{data.name}} | Mobile No : {{data.MobileNo}} <br/>
+</span>
+
+<h3>ngFor with ng-template</h3>
+
+<ng-template ngFor let-data [ngForOf]="personData">
+    Name : {{data.name}} | Mobile No : {{data.MobileNo}} <br/>
+</ng-template>
+
+<h3>ngFor with index,even,odd</h3>
+<span *ngFor="let data of personData; index as i; even as isEven; odd as isOdd">
+ <font color="red" *ngIf="isEven" > SrNo : {{i}} -  Name : {{data.name}} | Mobile No : {{data.MobileNo}} </font> <br/>
+ <font color="blue" *ngIf="isOdd" > SrNo : {{i}} - Name : {{data.name}} | Mobile No : {{data.MobileNo}} </font><br/>
+</span>
+
+<h3>ngFor ng-template with index,even,odd</h3>
+
+<ng-template ngFor let-data [ngForOf]="personData"; let-i=index; let-isEven=even; let-isOdd=odd>
+    <font color="red" *ngIf="isEven" > SrNo : {{i}} -  Name : {{data.name}} | Mobile No : {{data.MobileNo}} </font> <br/>
+    <font color="blue" *ngIf="isOdd" > SrNo : {{i}} - Name : {{data.name}} | Mobile No : {{data.MobileNo}} </font><br/>
+</ng-template>
+
+<h3>ngFor with index,first,last using html tag</h3>
+<div *ngFor="let data of personData; index as i; first as isFirst; last as isLast">
+    <font color="red" *ngIf="isFirst; else elseBlock" > SrNo : {{i}} -  Name : {{data.name}} | Mobile No : {{data.MobileNo}} </font> 
+  <ng-template #elseBlock>
+    <font color="blue" *ngIf="isLast; else elseBlock2" > SrNo : {{i}} - Name : {{data.name}} | Mobile No : {{data.MobileNo}} </font>
+  </ng-template>
+  <ng-template #elseBlock2>
+    <font color="green"> SrNo : {{i}} - Name : {{data.name}} | Mobile No : {{data.MobileNo}} </font>
+  </ng-template>
+   </div>
+
+   
+ <h3>ngFor with index,first,last using ng-template</h3>
+ <ng-template ngFor let-data [ngForOf]="personData"  let-i="index"; let-isFirst="first"; let-isLast="last">
+  <font color="red" *ngIf="isFirst; else elseBlock" > SrNo : {{i}} -  Name : {{data.name}} | Mobile No : {{data.MobileNo}} </font> <br/>
+
+<ng-template #elseBlock>
+  <font color="blue" *ngIf="isLast; else elseBlock2" > SrNo : {{i}} - Name : {{data.name}} | Mobile No : {{data.MobileNo}} </font>
+</ng-template>
+  
+<ng-template #elseBlock2>
+  <font color="green"> SrNo : {{i}} - Name : {{data.name}} | Mobile No : {{data.MobileNo}} </font><br/>
+</ng-template>
+ </ng-template>
+
+ <h3>ngFor with html tag using trackBy</h3>
+<div *ngFor="let data of personData;index as i; trackBy: fntrackBy">
+  Name : {{data.name}} | Mobile No : {{data.MobileNo}}
+</div>
+<button (click)="Addmore()" >Submit</button> 

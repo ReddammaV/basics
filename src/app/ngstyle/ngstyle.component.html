@@ -1,0 +1,52 @@
+<h3>ngStyle Example</h3>
+
+<div [ngStyle]="{'background-color':'Red'}">Hello Sahosoft</div>
+
+<div
+  [ngStyle]="{'background-color': myclassType=='online' ? 'green' : 'Red', 'color': myclassType=='online' ? 'white' : 'black'}">
+  Hello Sahosoft</div>
+
+<div [ngStyle]="{'background-color': myclassTypeId==='1' ? 'green' : 'Red'}">Hello Sahosoft</div>
+
+<div *ngFor="let data of personData">
+  <div [ngStyle]="{'color': myCountry==data.country ? 'green' : 'Red'}">
+    Name : {{data.name}} | country : {{data.country}}
+  </div>
+</div>
+
+
+<h3>Style</h3>
+<div [style.color]="'red'">Reddy</div>
+<div [style.background-color]="'red'" [style.color]="'white'">Reddy</div>
+
+<h3>ngStyle</h3>
+<div [ngStyle]="{'color':'red', 'font-size':'1.5em'}">Reddy</div>
+<div [ngStyle]="{'background-color':myCountry=='India' ? 'purple' : 'red'}">My Country</div>
+
+<h3>ngStyle using ngFor and switch case</h3>
+<div *ngFor="let data of personData">
+  <div [ngStyle]="{'color': getColor(data.country)}">
+    Name : {{data.name}} | country : {{data.country}}
+  </div>
+</div>
+
+<h3>Multiple Style Property</h3>
+<div *ngFor="let data of personData">
+  <div [style.color]="getColor(data.country)" [style.font-size.px]="24">
+    Name : {{data.name}} | country : {{data.country}}
+  </div>
+</div>
+
+<h3>Multiple times ngStyle</h3>
+<div *ngFor="let data of personData">
+  <div [ngStyle]="{'font-size.px':'24'}" [ngStyle]="{'color': getColor(data.country)}">
+    Name : {{data.name}} | country : {{data.country}}
+  </div>
+</div>
+
+<h3>Multiple ngStyle</h3>
+<div *ngFor="let data of personData">
+  <div [ngStyle]="{'color': getColor(data.country) , 'font-size.px':'24'}">
+    Name : {{data.name}} | country : {{data.country}}
+  </div>
+</div>

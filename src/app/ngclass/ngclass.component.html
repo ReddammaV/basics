@@ -1,0 +1,114 @@
+<h3>ngClass with string Example</h3>
+
+<div [ngClass]="'one'">
+  ngClass with string
+</div>
+
+<div [ngClass]="'one two'">
+  ngClass with string
+</div>
+
+<h3>myClass</h3>
+<div [ngClass]="myClass">
+  ngClass with string
+</div>
+
+<button (click)="getClass()">getClass</button>
+
+<h3>ngClass with string Example</h3>
+<div *ngFor="let data of personData">
+  <div [ngClass]="'one two'">
+    Name : {{data.name}} | country : {{data.country}}
+  </div>
+</div>
+
+
+
+<h3>ngClass with string Example</h3>
+
+<div [ngClass]="'one'">
+  ngClass with string
+</div>
+
+<div [ngClass]="'one two'">
+  ngClass with string
+</div>
+
+<div *ngFor="let data of personData">
+  <div [ngClass]="'one two'">
+    Name : {{data.name}} | country : {{data.country}}
+  </div>
+</div>
+
+
+<div [ngClass]="myClass">
+  ngClass with string
+</div>
+
+
+<h3>ngClass with Array Example</h3>
+<div [ngClass]="['one']">
+  ngClass with Array
+</div>
+
+<div [ngClass]="['one' , 'two']">
+  ngClass with Array
+</div>
+
+<div [ngClass]="myClassArr">
+  ngClass with string
+</div>
+
+<div *ngFor="let data of personData">
+  <div [ngClass]="['one', 'two']">
+    Name : {{data.name}} | country : {{data.country}}
+  </div>
+</div>
+
+<h3>ngClass with Object Example</h3>
+<div [ngClass]="{'one' : true}">
+  ngClass with Object
+</div>
+
+<div [ngClass]="{'one' : false}">
+  ngClass with Object
+</div>
+
+
+<div [ngClass]="{'one' : myclassType=='online'}">
+  ngClass with Object
+</div>
+
+<div [ngClass]="{'one' : myclassType=='offLine'}">
+  ngClass with Object
+</div>
+
+
+<div [ngClass]="{'one' : true , 'two': true}">
+  ngClass with Object
+</div>
+
+<div [ngClass]="{'one' : true , 'two': false}">
+  ngClass with Object
+</div>
+
+<h3>Multiple ngClass condition</h3>
+
+<div [ngClass]="{'one' : myclassType=='online',
+'two' : myclassType=='online',
+'three' : myclassType=='offLine',
+'four' : myclassType=='offLine'
+}">
+  ngClass with Object
+</div>
+
+<h3>Multiple ngClass condition ex</h3>
+<div *ngFor="let data of personData">
+  <div [ngClass]="{'one' : data.country=='India',
+'two' : data.country=='India',
+'three' : data.country!='India',
+'four' : data.country!='India'
+}">
+    Name : {{data.name}} | country : {{data.country}}
+  </div>
+</div>
