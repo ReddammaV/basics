@@ -7,6 +7,7 @@ import { NgforComponent } from './ngfor/ngfor.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { NgstyleComponent } from './ngstyle/ngstyle.component';
 import { NgclassComponent } from './ngclass/ngclass.component';
+import { AttributeComponent } from './attribute/attribute.component';
 
 const routes: Routes = [
   {path:'', component:NgifComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:'ngswitch', component:NgswitchComponent},
   {path:'ngstyle', component:NgstyleComponent},
   {path:'ngclass', component:NgclassComponent},
+  {path:'attribute', component:AttributeComponent},
 ];
 
 @NgModule({

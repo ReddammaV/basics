@@ -8,6 +8,7 @@ import { NgforComponent } from './ngfor/ngfor.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { NgstyleComponent } from './ngstyle/ngstyle.component';
 import { NgclassComponent } from './ngclass/ngclass.component';
+import { AttributeComponent } from './attribute/attribute.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NgclassComponent } from './ngclass/ngclass.component';
     NgforComponent,
     NgswitchComponent,
     NgstyleComponent,
-    NgclassComponent
+    NgclassComponent,
+    AttributeComponent
   ],
   imports: [
     BrowserModule,

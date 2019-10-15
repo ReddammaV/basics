@@ -9,7 +9,9 @@ export class NgstyleComponent implements OnInit {
   myclassType: string = "online";
   myclassTypeId: number = 1;
   myCountry = "India";
-
+  IsBold : boolean = true;
+  FontSize: number = 40;
+  IsItalic: boolean = true;
 
   personData = [
     { name: "Ajeet", country: "India" },
@@ -47,6 +49,16 @@ export class NgstyleComponent implements OnInit {
       case 'USA':
         return 'orange';
     }
+  }
+
+  //multiple styles
+  AddCSSStyles() {
+    let CssStyles = {
+      'font-weight': this.IsBold ? 'bold' : 'normal',
+      'font-style': this.IsItalic ? 'italic' : 'normal',
+      'font-size.px': this.FontSize
+    };
+    return CssStyles;
   }
 
 }
