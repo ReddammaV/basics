@@ -112,3 +112,59 @@
     Name : {{data.name}} | country : {{data.country}}
   </div>
 </div>
+
+<h1>Class Bindings</h1>
+<div> 
+   <button style="color: red;"  [style.font-weight]="IsBold ? 'bold' : 'normal'" >Save</button> 
+   <button style="color: red;"  [style.fontWeight]="IsBold ? 'bold' : 'normal'" >Save</button> 
+  
+   <button style="color: red;"  [style.font-size.px]="fontsize" >Save</button> 
+   <!-- <button style="color: red;"  [style.font-size.em]="fontsize" >Save</button>  -->
+  
+   <button style="color: red;"  [style.font-size.px]="fontsize" [style.fontWeight]="IsBold ? 'bold' : 'normal'" >Save</button> 
+  
+   <button style='color:red' [ngStyle]="AddCSSStyles()">My Button</button>
+  </div> 
+   
+  <h3>Class binding</h3>
+  
+  <div>
+    <button class="colorClass">Save</button>
+  </div>
+  
+  <div>
+    <button class="colorClass" [class]="'boldClass'">Save</button>
+  </div>
+  
+  <div>
+    <button class="colorClass" [class]="ClassToApply">Save</button>
+  </div>
+  
+  <div>
+    <button [class]="ClassToApply" class="colorClass">Save</button>
+  </div>
+  
+  
+  <div>
+    <button class="colorClass" [class.boldClass]="true">Save</button>
+  </div>
+  
+  <div>
+    <button class="colorClass" [class.boldClass]="false">Save</button>
+  </div>
+  
+  
+  <div>
+    <button class="colorClass" [class.boldClass]="ApplyBoldClass">Save</button>
+  </div>
+  
+  
+  <div>
+    <button class="colorClass" [class.boldClass]="!ApplyBoldClass">Save</button>
+  </div>
+  
+  <h3>NgClass</h3>
+  <div>
+    <button class="colorClass" [ngClass]="AddcssClass()">Save (NgClass)</button>
+  </div>
+   
