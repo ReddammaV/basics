@@ -1,0 +1,24 @@
+<h3>Property Binding</h3>
+<div [innerHTML]="firstName"></div>
+
+<h3>Using Interpolation</h3>
+<div innerHTML={{firstName}}></div>
+
+
+<h3>Property Binding</h3>
+<div>
+  <img [src]="imagePath" width="100px" height="100px" />
+</div>
+
+<h3>Using Interpolation</h3>
+<div>
+  <img src={{imagePath}} width="100px" height="100px" />
+</div>
+
+
+<div>
+  <input type="button" value="Disable and Enable" (click)="DisableandEnable()">
+
+  <button [disabled]="currentValue">Click Me 1</button>
+  <button disabled={{currentValue}}>Click Me 2</button>
+</div>

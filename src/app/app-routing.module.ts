@@ -8,6 +8,11 @@ import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { NgstyleComponent } from './ngstyle/ngstyle.component';
 import { NgclassComponent } from './ngclass/ngclass.component';
 import { AttributeComponent } from './attribute/attribute.component';
+import { InputParentComponent } from './input-parent/input-parent.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { PropertyComponent } from './property/property.component';
+import { EventComponent } from './event/event.component';
+
 
 const routes: Routes = [
   {path:'', component:NgifComponent},
@@ -17,6 +22,10 @@ const routes: Routes = [
   {path:'ngstyle', component:NgstyleComponent},
   {path:'ngclass', component:NgclassComponent},
   {path:'attribute', component:AttributeComponent},
+  {path:'input', component:InputParentComponent},
+  {path:'pipes', component:PipesComponent},
+  {path:'property', component:PropertyComponent},
+  {path:'event', component:EventComponent},
 ];
 
 @NgModule({

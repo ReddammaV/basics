@@ -27,4 +27,33 @@ export class NgclassComponent implements OnInit {
     this.myClass = 'three four';
   }
 
+  col = "2";
+  IsBold: boolean = true;
+  fontsize: number = 40;
+
+  FontSize: number = 40;
+  IsItalic: boolean = true;
+
+  AddCSSStyles() {
+    let CssStyles = {
+      'font-weight': this.IsBold ? 'bold' : 'normal',
+      'font-style': this.IsItalic ? 'italic' : 'normal',
+      'font-size.px': this.FontSize
+    };
+    return CssStyles;
+  }
+
+  ClassToApply: string = "boldClass text-success";
+  ApplyBoldClass: boolean = true;
+  ApplyItalicClass: boolean = true;
+
+  AddcssClass()
+  {
+    let cssClass = {
+      boldClass : this.ApplyBoldClass,
+      italicsClass : this.ApplyItalicClass
+    };
+    return cssClass;
+  }
+
 }
