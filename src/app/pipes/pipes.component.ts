@@ -22,5 +22,7 @@ export class PipesComponent implements OnInit {
   }
 
   currentDate = new Date();
+  birthday = new Date(1991, 7, 10);
+
 
 }

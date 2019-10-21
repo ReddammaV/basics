@@ -16,6 +16,14 @@ import { InputChildComponent } from './input-child/input-child.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { PropertyComponent } from './property/property.component';
 import { EventComponent } from './event/event.component';
+import { CustompipesComponent } from './custompipes/custompipes.component';
+import { WelcomeuppercasePipe } from './allpipes/welcomeuppercase.pipe';
+import { WelcomePipe } from './allpipes/welcome.pipe';
+import { ReversePipe } from './allpipes/reverse.pipe';
+import { LimitwordPipe } from './allpipes/limitword.pipe';
+import { BoldPipe } from './allpipes/bold.pipe';
+import { GreetPipe } from './allpipes/greet.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +38,14 @@ import { EventComponent } from './event/event.component';
     PipesComponent,
     PropertyComponent,
     EventComponent,
+    CustompipesComponent,
+    WelcomeuppercasePipe,
+    WelcomePipe,
+    ReversePipe,
+    LimitwordPipe,
+    BoldPipe,
+    GreetPipe,
+    
   ],
   imports: [
     BrowserModule,

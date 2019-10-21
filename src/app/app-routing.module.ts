@@ -12,6 +12,7 @@ import { InputParentComponent } from './input-parent/input-parent.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { PropertyComponent } from './property/property.component';
 import { EventComponent } from './event/event.component';
+import { CustompipesComponent } from './custompipes/custompipes.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path:'pipes', component:PipesComponent},
   {path:'property', component:PropertyComponent},
   {path:'event', component:EventComponent},
+  {path:'custompipes', component:CustompipesComponent},
 ];
 
 @NgModule({
