@@ -1,0 +1,51 @@
+<h2>Welcome</h2>
+<div ngNonBindable>{{name | welcome}}</div>
+<div>{{name | welcome}}</div>
+
+<br>
+<br>
+
+<h2>Bold</h2>
+<div ngNonBindable>{{name | bold}}</div>
+<div [innerHTML]='name | bold'></div>
+
+<br>
+<br>
+
+<h2>Reverse</h2>
+<div ngNonBindable>{{name | reverse}}</div>
+<div>{{name | reverse}}</div>
+
+<br>
+<br>
+
+<h2>Chaining of custom pipes</h2>
+
+<div ngNonBindable>{{name | welcome | reverse}}</div>
+<div>{{name | welcome | reverse }}</div>
+
+<br>
+<br>
+
+<h2>welcomeuppercase</h2>
+<div ngNonBindable>{{name | welcomeuppercase}}</div>
+<div>{{name | welcomeuppercase}}</div>
+
+<br>
+<br>
+<h2>limitwords</h2>
+<div ngNonBindable>{{remarks}}</div>
+<div>{{remarks}}</div>
+
+<div ngNonBindable>{{remarks | limitword}}</div>
+<div>{{remarks | limitword}}</div>
+
+<div ngNonBindable>{{remarks | limitword : 28}}</div>
+<div>{{remarks | limitword : 28}}</div>
+
+<div ngNonBindable>{{remarks | limitword : 28 : '***'}}</div>
+<div>{{remarks | limitword : 28 : '***'}}</div>
+
+<h2>Greet</h2>
+<div>{{name | greet}}</div>
+<div id="lblGreetings"></div>
