@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class OutputParentComponent implements OnInit {
   cData: any;
   getValues: any;
-  fullName: any;
+  fullname: any;
   email: any;
   password: any;
 
@@ -23,8 +23,8 @@ export class OutputParentComponent implements OnInit {
 
   getFormValues(event) {
     this.getValues = event;
-    console.log(this.getValues.name);
-    this.fullName = this.getValues.name;
+    console.log(this.getValues.fullname);
+    this.fullname = this.getValues.fullname;
     this.email = this.getValues.email;
     this.password = this.getValues.password;
   }
