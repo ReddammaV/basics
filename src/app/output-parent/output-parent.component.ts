@@ -7,14 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OutputParentComponent implements OnInit {
   cData: any;
+  getValues: any;
+  fullName: any;
+  email: any;
+  password: any;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  getEvent(event){
+  getEvent(event) {
     this.cData = event;
+  }
+
+  getFormValues(event) {
+    this.getValues = event;
+    console.log(this.getValues.name);
+    this.fullName = this.getValues.name;
+    this.email = this.getValues.email;
+    this.password = this.getValues.password;
   }
 
 }

@@ -1,4 +1,40 @@
 <h3>Parent Component</h3>
 {{name}}
 <!-- <app-input-child [pData]="name"></app-input-child> -->
-<app-input-child [pDataAlias]="name"></app-input-child>
+
+
+<br>
+<br>
+<br>
+<br>
+
+<h3>Form</h3>
+<form [formGroup]="reactiveForm" (ngSubmit)="onSubmit(reactiveForm.value)">
+  <div class="form-group row">
+    <label for="staticName" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="name" formControlName="fullname" required placeholder="Enter Name">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" formControlName="email" name="email" required placeholder="email@example.com">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" formControlName="password" name="password" required placeholder="Password">
+    </div>
+  </div>
+  <div>
+    <button type="submit" class="btn btn-success float-right" [disabled]="!reactiveForm.valid">Submit</button>
+  </div>
+</form>
+
+<div>
+    {{reactiveForm.value | json}}
+</div>
+
+<app-input-child [pDataAlias]="name" [formData]="formDataValues"></app-input-child>
