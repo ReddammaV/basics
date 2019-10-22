@@ -9,6 +9,7 @@ import { NgstyleComponent } from './ngstyle/ngstyle.component';
 import { NgclassComponent } from './ngclass/ngclass.component';
 import { AttributeComponent } from './attribute/attribute.component';
 import { InputParentComponent } from './input-parent/input-parent.component';
+import { OutputParentComponent } from './output-parent/output-parent.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { PropertyComponent } from './property/property.component';
 import { EventComponent } from './event/event.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:'ngclass', component:NgclassComponent},
   {path:'attribute', component:AttributeComponent},
   {path:'input', component:InputParentComponent},
+  {path:'output', component:OutputParentComponent},
   {path:'pipes', component:PipesComponent},
   {path:'property', component:PropertyComponent},
   {path:'event', component:EventComponent},

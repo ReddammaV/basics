@@ -23,6 +23,8 @@ import { ReversePipe } from './allpipes/reverse.pipe';
 import { LimitwordPipe } from './allpipes/limitword.pipe';
 import { BoldPipe } from './allpipes/bold.pipe';
 import { GreetPipe } from './allpipes/greet.pipe';
+import { OutputParentComponent } from './output-parent/output-parent.component';
+import { OutputChildComponent } from './output-child/output-child.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { GreetPipe } from './allpipes/greet.pipe';
     LimitwordPipe,
     BoldPipe,
     GreetPipe,
+    OutputParentComponent,
+    OutputChildComponent,
     
   ],
   imports: [

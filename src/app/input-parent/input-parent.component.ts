@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./input-parent.component.css']
 })
 export class InputParentComponent implements OnInit {
+  name = "Reddy";
 
   constructor() { }
 
