@@ -1,0 +1,12 @@
+<h3>Parent Component</h3>
+{{cData}}
+{{getValues | json}}
+<br>
+<br>
+<div *ngIf="fullName">Name: {{getValues.fullName}}</div>
+<div *ngIf="email">Email: {{getValues.email}}</div>
+<div *ngIf="password">Password: {{getValues.password}}</div>
+
+<!-- <app-output-child (name)="getEvent($event)"></app-output-child> -->
+<app-output-child (eventClickAlias)="getEvent($event)" (formValues)="getFormValues($event)"></app-output-child>
+<!-- <app-output-child (name)="cData=$event"></app-output-child> -->

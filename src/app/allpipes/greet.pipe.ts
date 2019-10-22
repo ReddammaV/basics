@@ -14,7 +14,7 @@ export class GreetPipe implements PipeTransform {
       console.log('Good Morning');
       msg = "Good Morning";
       // alert("Good Morning");
-    } else if (curHr < 18) {
+    } else if (curHr > 12 && curHr < 18) {
       console.log('Good Afternoon');
       msg = "Good Afternoon";
       // alert("Good Afternoon");

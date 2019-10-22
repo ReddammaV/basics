@@ -1,0 +1,36 @@
+<h3>Child Component</h3>
+
+<button (click)="outputMethod()">Click to get child Data</button>
+<!-- <div (onchange)="outputMethod()">Click to get child Data</div> -->
+
+<br>
+<br>
+<br>
+<br>
+
+<h3>Form</h3>
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+  <div class="form-group row">
+    <label for="staticName" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="name" [(ngModel)]="fullname" required placeholder="Enter Name">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="email" name="email" required placeholder="email@example.com">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" [(ngModel)]="password" name="password" required placeholder="Password">
+    </div>
+  </div>
+  <div>
+    <button type="submit" class="btn btn-success float-right" [disabled]="!f.valid">Submit</button>
+  </div>
+</form>
+
+<!-- <pre>form.value: {{form.value | json}}</pre> -->

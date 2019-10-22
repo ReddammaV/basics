@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import {FormsModule} from '@angular/forms'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { NgifComponent } from './ngif/ngif.component';
@@ -23,6 +23,8 @@ import { ReversePipe } from './allpipes/reverse.pipe';
 import { LimitwordPipe } from './allpipes/limitword.pipe';
 import { BoldPipe } from './allpipes/bold.pipe';
 import { GreetPipe } from './allpipes/greet.pipe';
+import { OutputParentComponent } from './output-parent/output-parent.component';
+import { OutputChildComponent } from './output-child/output-child.component';
 
 @NgModule({
   declarations: [
@@ -45,12 +47,15 @@ import { GreetPipe } from './allpipes/greet.pipe';
     LimitwordPipe,
     BoldPipe,
     GreetPipe,
+    OutputParentComponent,
+    OutputChildComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
