@@ -20,6 +20,9 @@ export class ViewParentComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.viewChild.title = "Reddamma";
     this.viewChild.country = "Bhart";
+
+    // this.viewChild.onClick();
+    // console.log(this.viewChild.onClick(), 'onclick')
     
 
     // this.viewChild.formValues = this.getValues;

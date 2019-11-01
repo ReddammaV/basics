@@ -15,6 +15,11 @@ export class ViewChildComponent implements OnInit {
   ngOnInit() {
   }
 
+  onClick() {
+    this.title = "Sahosoft";
+    this.country = "Hindustan";
+  }
+
   onSubmit(form) {
     console.log('Submitted', form);
     this.formValues = form;

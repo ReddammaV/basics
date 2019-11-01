@@ -32,6 +32,7 @@ import { ContentChildComponent } from './contentchild/content-child/content-chil
 import { ContentComponent } from './contentchild/content/content.component';
 import { ViewParentComponent } from './viewchild/view-parent/view-parent.component';
 import { ViewChildComponent } from './viewchild/view-child/view-child.component';
+import { ViewReferenceComponent } from './viewchild/view-reference/view-reference.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { ViewChildComponent } from './viewchild/view-child/view-child.component'
     ContentComponent,
     ViewParentComponent,
     ViewChildComponent,
+    ViewReferenceComponent,
     
   ],
   imports: [

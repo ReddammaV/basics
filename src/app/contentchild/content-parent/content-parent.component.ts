@@ -24,6 +24,7 @@ export class ContentParentComponent implements OnInit {
   ngAfterContentInit() {
     this.contentChild.title="Chandan Singh";
     this.contentChild.country="Bharat";
+    
 
     console.log("ngAfterContentInit called");
   }
