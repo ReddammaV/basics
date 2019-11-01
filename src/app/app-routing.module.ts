@@ -18,6 +18,7 @@ import { TemplateformsComponent } from './templateforms/templateforms.component'
 import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
 import { ContentComponent } from './contentchild/content/content.component';
 import { ViewParentComponent } from './viewchild/view-parent/view-parent.component';
+import { ViewReferenceComponent } from './viewchild/view-reference/view-reference.component';
 
 const routes: Routes = [
   { path: '', component: NgifComponent },
@@ -37,6 +38,7 @@ const routes: Routes = [
   { path: 'reactive', component: ReactiveformsComponent },
   { path: 'contentchild', component: ContentComponent },
   { path: 'viewchild', component: ViewParentComponent },
+  { path: 'viewchildref', component: ViewReferenceComponent },
 ];
 
 @NgModule({
