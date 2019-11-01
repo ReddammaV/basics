@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./input-parent.component.css']
 })
 export class InputParentComponent implements OnInit {
-  name = "Reddy";
+  name = 'Reddy';
   reactiveForm: FormGroup;
   formDataValues: any;
 
