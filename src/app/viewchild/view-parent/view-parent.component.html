@@ -1,0 +1,10 @@
+<p>
+  view-parent works!
+</p>
+{{viewChild.formValues | json}}
+<br>
+<div>Name: {{viewChild.formValues?.fullname}}</div>
+<div>Email: {{viewChild.formValues?.email}}</div>
+<div>Password: {{viewChild.formValues?.password}}</div>
+
+<app-view-child></app-view-child>

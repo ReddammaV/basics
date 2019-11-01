@@ -8,10 +8,12 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class OutputChildComponent implements OnInit {
   formValues: any;
   // @Output() name = new EventEmitter<string>();
+  // tslint:disable-next-line: no-output-rename
   @Output('eventClickAlias') name = new EventEmitter<string>();
+  // tslint:disable-next-line: no-output-rename
   @Output('formValues') myFormValues = new EventEmitter<any>();
 
-  typename = "Reddy";
+  typename = 'Reddy';
 
 
   constructor() { }
@@ -19,12 +21,12 @@ export class OutputChildComponent implements OnInit {
   ngOnInit() {
   }
 
-  outputMethod(){
+  outputMethod() {
     this.name.emit(this.typename);
   }
 
-  onSubmit(form){
-    console.log("Submitted", form);
+  onSubmit(form) {
+    console.log('Submitted', form);
     this.formValues = form;
     console.log(this.formValues);
     this.myFormValues.emit(this.formValues);

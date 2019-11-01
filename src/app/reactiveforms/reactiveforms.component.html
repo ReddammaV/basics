@@ -1,0 +1,85 @@
+<form [formGroup]='reactiveForm' (ngSubmit)='onSubmit()'>
+  <!-- radio start -->
+  <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" formControlName="gridRadios" id="gridRadios1"
+            value="ihavealocation" checked>
+          <label class="form-check-label" for="gridRadios1">
+            I HAVE A LOCATION
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" formControlName="gridRadios" id="gridRadios2"
+            value="nationwide">
+          <label class="form-check-label" for="gridRadios2">
+            NATIONWIDE
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" formControlName="gridRadios" id="gridRadios3"
+            value="internetonly">
+          <label class="form-check-label" for="gridRadios3">
+            INTERNET ONLY
+          </label>
+        </div>   
+         <!-- error -->
+         <div *ngIf="submitted && form.gridRadios.errors" class="invalid-feedback">
+            <div *ngIf="form.gridRadios.errors.required">Select one of the radio button is required</div>
+          </div>
+          <!-- error -->    
+      </div>
+    </div>
+  </fieldset>
+  <!-- radio end -->
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" formControlName="fullname" name="fullname" required
+        placeholder="Enter name" [ngClass]="{ 'is-invalid': submitted && form.fullname.errors }">
+      <!-- error -->
+      <div *ngIf="submitted && form.fullname.errors" class="invalid-feedback">
+        <div *ngIf="form.fullname.errors.required">Name is required</div>
+      </div>
+      <!-- error -->
+    </div>
+  </div>
+  <!-- name end -->
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" formControlName="email" name="email" required
+        placeholder="email@example.com" [ngClass]="{ 'is-invalid': submitted && form.email.errors }">
+      <!-- error -->
+      <div *ngIf="submitted && form.fullname.errors" class="invalid-feedback">
+        <div *ngIf="form.email.errors.required">Email is required</div>
+        <div *ngIf="form.email.errors.email">Email must be a valid email address</div>
+      </div>
+      <!-- error -->
+    </div>
+  </div>
+  <!-- email end -->
+
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" formControlName="password" name="password" required
+        placeholder="Password" [ngClass]="{ 'is-invalid': submitted && form.password.errors }">
+      <!-- error -->
+      <div *ngIf="submitted && form.password.errors" class="invalid-feedback">
+        <div *ngIf="form.password.errors.required">Password is required</div>
+      </div>
+      <!-- error -->
+    </div>
+  </div>
+  <!-- password end -->
+
+  <div>
+    <!-- <button type="submit" class="btn btn-success float-right" [disabled]="!reactiveForm.valid">Submit</button> -->
+    <button type="submit" class="btn btn-success float-right">Submit</button>
+  </div>
+</form>
+
+{{formDataValues | json}}
