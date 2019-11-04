@@ -11,6 +11,10 @@ export class ContentChildComponent implements OnInit {
   title: string = "Ajeet Singh";
   country = "India";
 
+  message: string = "";
+  count: number = 0;
+  
+
   onClick() {
     this.title = "Sahosoft";
     this.country = "Hindustan";
@@ -22,6 +26,18 @@ export class ContentChildComponent implements OnInit {
 
   childContent() {
     this.data.emit(this.name);
+  }
+
+  //counter
+  
+  increasebyOne() {
+    this.count ++;
+    this.message = " Counter :" + this.count;
+  }
+
+  decreasebtOne() {
+    this.count = this.count - 1;
+    this.message = " Counter :" + this.count;
   }
 
 }
