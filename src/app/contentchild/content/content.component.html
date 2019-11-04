@@ -3,5 +3,66 @@
 </p>
 
 <app-content-parent>
-  <app-content-child></app-content-child>
+  <p><b>I am ajeet</b></p>
+  <button>Save</button>
+  <div class="clearfix"></div>
+  <p class="className">I am Class</p>
+  <p id="currentid">I am ID</p>
+  <h1>Hello Sahosoft</h1>
+  <div class="clearfix"></div>
+  <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    alt="image" width="300">
+  <div class="clearfix"></div>
+  <input type="text" value="Reddy" placeholder="name">
+  <input type="password" placeholder="Password">
+  <!-- <app-content-child></app-content-child> -->
 </app-content-parent>
+
+<!-- counter -->
+<br>
+<br>
+<h3>Counter</h3>
+<button (click)="Increase()">Increase</button>
+<button (click)="Decrease()">Decrease</button>
+
+
+<app-content-child></app-content-child>
+
+<h3>ng-container</h3>
+
+<ng-container *ngIf="false">I am ng-container</ng-container>
+
+<table border="2">
+
+  <tr *ngFor="let data of myPerson">
+    <div>
+      <td>{{data.id}}</td>
+      <td>{{data.name}}</td>
+      <td>{{data.Marks}}</td>
+    </div>
+  </tr>
+</table>
+<br><br>
+<table border="2">
+  <!-- instead of div we can use ng-container -->
+  <ng-container *ngFor="let data of myPerson">
+    <tr *ngIf="data.Marks>50">
+      <td>{{data.id}}</td>
+      <td>{{data.name}}</td>
+      <td>{{data.Marks}}</td>
+    </tr>
+  </ng-container>
+</table>
+
+<h3>ng-tempalte</h3>
+
+<table border="2">
+  <!-- instead of div we can use ng-template -->
+  <ng-template ngFor let-data [ngForOf]="myPerson">
+    <tr *ngIf="data.Marks>50">
+      <td>{{data.id}}</td>
+      <td>{{data.name}}</td>
+      <td>{{data.Marks}}</td>
+    </tr>
+  </ng-template>
+</table>

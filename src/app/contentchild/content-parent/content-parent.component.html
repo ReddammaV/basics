@@ -1,5 +1,21 @@
 <h3>Parent Component</h3>
-{{cdata}} 
+{{cdata}}
 <!-- <app-content-child (passData)="getEvent($event)"></app-content-child> -->
 
-<ng-content></ng-content>
+<!-- <ng-content></ng-content> -->
+<ng-content select="button"></ng-content>
+<ng-content select="[class=clearfix]"></ng-content>
+
+<!-- <ng-content select="[alt=image]"></ng-content> -->
+<ng-content select="[width=300]"></ng-content>
+
+<ng-content select=".className"></ng-content>
+
+<!-- <ng-content select="[class=className]"></ng-content> -->
+<ng-content select="[id=currentid]"></ng-content>
+<!-- <ng-content select="[class=clearfix]"></ng-content> -->
+<!-- <ng-content select="#currentid"></ng-content> -->
+<ng-content select="h1"></ng-content>
+<ng-content select="[placeholder=name]"></ng-content>
+<ng-content select="[type=password]"></ng-content>
+
