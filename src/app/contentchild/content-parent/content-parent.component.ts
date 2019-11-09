@@ -10,7 +10,7 @@ export class ContentParentComponent implements OnInit {
   // @ContentChild(ContentChildComponent, { static: false }) contentChild: ContentChildComponent;
   @ContentChild(ContentChildComponent) contentChild: ContentChildComponent;
 
-  title: string ="Reddy";
+  // title: string ="Reddy";
   cdata:any;
   constructor() { }
 
@@ -22,10 +22,8 @@ export class ContentParentComponent implements OnInit {
   }
 
   ngAfterContentInit() {
-    this.contentChild.title="Chandan Singh";
-    this.contentChild.country="Bharat";
-    
-
+    // this.contentChild.title="Chandan Singh";
+    // this.contentChild.country="Bharat";   
     console.log("ngAfterContentInit called");
   }
 

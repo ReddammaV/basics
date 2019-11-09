@@ -9,6 +9,8 @@ export class ViewReferenceComponent implements OnInit, AfterViewInit {
 
   // @ViewChild('someContent') someContent;
   @ViewChild('someContent') someContent: ElementRef;
+  @ViewChild('title') title: ElementRef;
+  @ViewChild('product') product: ElementRef;
   
   constructor() {
     // console.log(this.someContent);
@@ -24,6 +26,11 @@ export class ViewReferenceComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(){
     // console.log(this.someContent);
+    this.title.nativeElement.style.background = "black";
+    this.title.nativeElement.style.color = "green";
+
+    this.product.nativeElement.style.background = "red";
+    this.product.nativeElement.style.color = "white";
   }
 
 }

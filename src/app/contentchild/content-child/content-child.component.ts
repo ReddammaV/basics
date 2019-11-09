@@ -8,7 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class ContentChildComponent implements OnInit {
   @Output('passData') data = new EventEmitter<any>();
   name = 'Reddy';
-  title: string = "Ajeet Singh";
+  title = "Ajeet Singh";
   country = "India";
 
   message: string = "";

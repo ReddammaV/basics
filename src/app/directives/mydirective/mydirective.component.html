@@ -1,0 +1,12 @@
+<!-- static -->
+<p appChangecolor>
+  mydirective works!
+</p>
+
+<!-- dynamic -->
+<div>
+  <h3 appChangecolor>Change Color</h3>
+  <input type="radio" name="color" (click)="setColor('green')"> Green
+  <input type="radio" name="color" (click)="setColor('blue')"> Blue
+  <input type="radio" name="color" (click)="setColor('orange')"> Orange
+</div>
