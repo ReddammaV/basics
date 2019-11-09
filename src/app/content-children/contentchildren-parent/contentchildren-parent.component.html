@@ -1,0 +1,19 @@
+<p>
+  contentchildren-parent works!
+</p>
+
+<h3>Counter</h3>
+<button (click)="Increase()">Increase</button>
+<button (click)="Decrease()">Decrease</button>
+
+<!-- <h2>{{msg}}</h2> -->
+
+<!-- this is not for content-children -->
+<!-- 
+<app-contentchildren-child [name]="varData1"></app-contentchildren-child>
+<app-contentchildren-child [name]="varData2"></app-contentchildren-child>
+<app-contentchildren-child [name]="varData3"></app-contentchildren-child>
+<app-contentchildren-child [name]="varData4"></app-contentchildren-child> -->
+
+<!-- this is for content-children -->
+<ng-content></ng-content> <!-- This is optional for content-children -->

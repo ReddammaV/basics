@@ -1,118 +1,127 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container">
-    <a class="navbar-brand" routerLink="">Angular Basics</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link " data-toggle="dropdown" href="#">Structural Directives</a>
-          <ul class="dropdown-menu">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="ngif" routerLinkActive="active">NgIf</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="ngfor" routerLinkActive="active">NgFor</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="ngswitch" routerLinkActive="active">NgSwitch</a>
-            </li>
-          </ul>
-        </li>
+<!-- nav -->
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+  <a class="navbar-brand" routerLink="">Angular Basics</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <!-- All Directives start -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Directives
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <!-- <li><a class="dropdown-item" href="#">Action</a></li> -->
+          <!-- Structural Directives -->
+          <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Structural Directives</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="ngif" routerLinkActive="active">NgIf</a></li>
+              <li><a class="dropdown-item" routerLink="ngfor" routerLinkActive="active">NgFor</a></li>
+              <li><a class="dropdown-item" routerLink="ngswitch" routerLinkActive="active">NgSwitch</a></li>
+            </ul>
+          </li>
+          <!-- Structural Directives -->
+          <!-- Attribute Directives -->
+          <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Attribute Directives</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="ngstyle" routerLinkActive="active">NgStyle</a></li>
+              <li><a class="dropdown-item" routerLink="ngclass" routerLinkActive="active">NgClass</a></li>
+            </ul>
+          </li>
+          <!-- Attribute Directives -->
+          <!-- Custom Directives -->
+          <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Custom Directives</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="colorchange" routerLinkActive="active">View Children Directive</a></li>
+              <li><a class="dropdown-item" routerLink="contentdirective" routerLinkActive="active">Content Children Directive</a></li>
+            </ul>
+          </li>
+          <!-- Custom Directives -->
+        </ul>
+      </li>
+      <!-- All Directives end -->
 
-        <li class="nav-item dropdown">
-          <a class="nav-link " data-toggle="dropdown" href="#">Attribute Directives</a>
-          <ul class="dropdown-menu">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="ngstyle" routerLinkActive="active">NgStyle</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="ngclass" routerLinkActive="active">NgClass</a>
-            </li>
-          </ul>
-        </li>
+      <!-- All Stuff start -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          All Stuff
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <!-- <li><a class="dropdown-item" href="#">Action</a></li> -->
+          <!-- Bindings -->
+          <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Bindings</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="attribute" routerLinkActive="active">Attribute Binding</a></li>
+              <li><a class="dropdown-item" routerLink="property" routerLinkActive="active">Property Binding</a></li>
+              <li><a class="dropdown-item" routerLink="event" routerLinkActive="active">Event Binding</a></li>
+            </ul>
+          </li>
+          <!-- Bindings -->
+          <!-- Data Passing -->
+          <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Data Passing</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="input" routerLinkActive="active">Input</a></li>
+              <li><a class="dropdown-item" routerLink="output" routerLinkActive="active">Output</a></li>
+            </ul>
+          </li>
+          <!-- Data Passing -->
+          <!-- Pipes -->
+          <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Pipes</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="pipes" routerLinkActive="active">Pipes</a></li>
+              <li><a class="dropdown-item" routerLink="custompipes" routerLinkActive="active">Custom Pipes</a></li>
+            </ul>
+          </li>
+          <!-- Pipes -->
+        </ul>
+      </li>
+      <!-- All Stuff end -->
 
-        <!-- bindings -->
-        <li class="nav-item dropdown">
-          <a class="nav-link " data-toggle="dropdown" href="#">Bindings</a>
-          <ul class="dropdown-menu">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="attribute" routerLinkActive="active">Attribute Binding</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="property" routerLinkActive="active">Property Binding</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="event" routerLinkActive="active">Event Binding</a>
-            </li>
-          </ul>
-        </li>
-        <!-- bindings -->
+      <!-- forms -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Forms
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li><a class="dropdown-item" routerLink="templatedriven" routerLinkActive="active">Template Driven</a></li>
+          <li><a class="dropdown-item" routerLink="reactive" routerLinkActive="active">Reactive</a></li>
+        </ul>
+      </li>
+      <!-- forms -->
 
-        <!-- data passing -->
-        <li class="nav-item dropdown">
-          <a class="nav-link " data-toggle="dropdown" href="#">Data Passing</a>
-          <ul class="dropdown-menu">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="input" routerLinkActive="active">Input</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="output" routerLinkActive="active">Output</a>
-            </li>
-          </ul>
-        </li>
-        <!-- data passing -->
+      <!-- Life Cycle Hooks -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Life Cycle Hooks
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li><a class="dropdown-item" routerLink="contentchild" routerLinkActive="active">Content Child</a></li>
+          <li><a class="dropdown-item" routerLink="contentchild2" routerLinkActive="active">Content Child2</a></li>
+          <li><a class="dropdown-item" routerLink="viewchild" routerLinkActive="active">View Child</a></li>
+          <li><a class="dropdown-item" routerLink="viewchildref" routerLinkActive="active">View Child Reference</a></li>
+          <li><a class="dropdown-item" routerLink="viewchildren" routerLinkActive="active">View Child 2</a></li>
+          <li><a class="dropdown-item" routerLink="colorchange" routerLinkActive="active">View Children Directive</a></li>
+          <li><a class="dropdown-item" routerLink="contentchildren" routerLinkActive="active">Content Children</a></li>
+        </ul>
+      </li>
+      <!-- Life Cycle Hooks -->
 
-         <!-- Pipes -->
-         <li class="nav-item dropdown">
-          <a class="nav-link " data-toggle="dropdown" href="#">Pipes</a>
-          <ul class="dropdown-menu">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="pipes" routerLinkActive="active">Pipes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="custompipes" routerLinkActive="active">Custom Pipes</a>
-            </li>
-          </ul>
-        </li>
-        <!-- Pipes -->
 
-         <!-- Forms -->
-         <li class="nav-item dropdown">
-          <a class="nav-link " data-toggle="dropdown" href="#">Forms</a>
-          <ul class="dropdown-menu">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="templatedriven" routerLinkActive="active">Template Driven</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="reactive" routerLinkActive="active">Reactive</a>
-            </li>
-          </ul>
-        </li>
-        <!-- Forms -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li> -->
 
-        <!-- Life Cycle Hooks -->
-        <li class="nav-item dropdown">
-          <a class="nav-link " data-toggle="dropdown" href="#">Life Cycle Hooks</a>
-          <ul class="dropdown-menu">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="contentchild" routerLinkActive="active">Content Child</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="viewchild" routerLinkActive="active">View Child</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="viewchildref" routerLinkActive="active">View Child Reference</a>
-            </li>
-          </ul>
-        </li>
-        <!-- Life Cycle Hooks -->
-      </ul>
-    </div>
+    </ul>
   </div>
 </nav>
+<!-- nav -->
+
 <!-- section -->
 <div class="container">
   <div class="wrapper">

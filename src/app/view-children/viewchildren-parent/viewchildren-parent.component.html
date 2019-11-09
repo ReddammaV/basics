@@ -1,0 +1,18 @@
+<p>
+  viewchildren-parent works!
+</p>
+
+<!-- {{title}}
+{{country}} -->
+
+{{message}}
+<br>
+{{myArray | json}}
+
+<ul>
+  <li *ngFor = "let item of myArray">
+    {{item}}
+  </li>
+</ul>
+
+<app-viewchildren-child></app-viewchildren-child> <!-- this is child import is must -->
