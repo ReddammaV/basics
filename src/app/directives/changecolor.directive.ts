@@ -1,11 +1,15 @@
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appChangecolor]'
 })
 export class ChangecolorDirective {
 
-  constructor(private elmref:ElementRef) { }
+  focus = true;
+
+  constructor(private elmref:ElementRef) {
+    // this.elmref.nativeElement.style.color = "red";
+   }
 
   ngAfterViewInit(){
     this.elmref.nativeElement.style.color = "red";
@@ -14,5 +18,7 @@ export class ChangecolorDirective {
   changeColor(color){
     this.elmref.nativeElement.style.color = color;
   }
+
+
 
 }

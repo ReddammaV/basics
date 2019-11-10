@@ -19,10 +19,15 @@ export class MydirectiveComponent implements OnInit {
   //   this.colorDir.changeColor(val);
   // }
 
-  setColor(val: string){
+  setColor(val: string) {
     this.colorDir.forEach(element => {
       element.changeColor(val);
     });
+  }
+
+
+  ngAfterContentInit() {
+    console.log('directive called');
   }
 
 }
