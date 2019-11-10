@@ -2,6 +2,10 @@
   content-directive works!
 </p>
 
-<app-directive-content id="password-field" icon="user">
+<app-directive-content *appStructuraldirective='true'>
+  <input appChangecolor placeholder="Password" class="test-class">
+</app-directive-content>
+
+<app-directive-content *appStructuraldirective='false'>
   <input appChangecolor placeholder="Password" class="test-class">
 </app-directive-content>
