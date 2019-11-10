@@ -25,6 +25,7 @@ import { MydirectiveComponent } from './directives/mydirective/mydirective.compo
 import { Contentchild2Component } from './contentchild2/contentchild2/contentchild2.component';
 import { ContentMainComponent } from './content-children/content-main/content-main.component';
 import { ContentDirectiveComponent } from './directives/content-directive/content-directive.component';
+import { StructuraldirectiveComponent } from './directives/structuraldirective/structuraldirective.component';
 
 const routes: Routes = [
   { path: '', component: NgifComponent },
@@ -50,6 +51,7 @@ const routes: Routes = [
   { path: 'contentchild2', component: Contentchild2Component },
   { path: 'contentchildren', component: ContentMainComponent },
   { path: 'contentdirective', component: ContentDirectiveComponent },
+  { path: 'structuraldirective', component: StructuraldirectiveComponent },
 ];
 
 @NgModule({

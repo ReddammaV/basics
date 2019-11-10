@@ -45,6 +45,8 @@ import { ContentchildrenParentComponent } from './content-children/contentchildr
 import { ContentchildrenChildComponent } from './content-children/contentchildren-child/contentchildren-child.component';
 import { ContentDirectiveComponent } from './directives/content-directive/content-directive.component';
 import { DirectiveContentComponent } from './directives/directive-content/directive-content.component';
+import { StructuraldirectiveDirective } from './directives/structuraldirective.directive';
+import { StructuraldirectiveComponent } from './directives/structuraldirective/structuraldirective.component';
 
 @NgModule({
   declarations: [
@@ -89,6 +91,8 @@ import { DirectiveContentComponent } from './directives/directive-content/direct
     ContentchildrenChildComponent,
     ContentDirectiveComponent,
     DirectiveContentComponent,
+    StructuraldirectiveDirective,
+    StructuraldirectiveComponent,
     
   ],
   imports: [

@@ -1,4 +1,4 @@
-import { Component, OnInit, ContentChildren, QueryList } from '@angular/core';
+import { Component, OnInit, ContentChildren, QueryList, ContentChild, Input, HostBinding, ElementRef } from '@angular/core';
 import { ChangecolorDirective } from '../changecolor.directive';
 
 @Component({
@@ -7,15 +7,19 @@ import { ChangecolorDirective } from '../changecolor.directive';
   styleUrls: ['./directive-content.component.css']
 })
 export class DirectiveContentComponent implements OnInit {
-  @ContentChildren(ChangecolorDirective) changeColor: QueryList<ChangecolorDirective>
+  @ContentChild(ChangecolorDirective, { read: ElementRef }) changeColor: ChangecolorDirective;
 
   constructor() { }
 
   ngOnInit() {
+  } 
+
+  
+
+  ngAfterContentInit() {                                            
+    console.log('directive called');
   }
 
-  setColor(val){
-    this.changeColor.forEach( el => el.changeColor(val))
-  }
+
 
 }
