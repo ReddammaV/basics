@@ -9,6 +9,7 @@ import { ChangecolorDirective } from '../changecolor.directive';
 export class DirectiveContentComponent implements OnInit {
   @ContentChild(ChangecolorDirective, { read: ElementRef }) changeColor: ChangecolorDirective;
 
+  myname: string = "Reddy";
   constructor() { }
 
   ngOnInit() {
