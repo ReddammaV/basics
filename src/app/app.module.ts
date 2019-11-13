@@ -47,6 +47,9 @@ import { ContentDirectiveComponent } from './directives/content-directive/conten
 import { DirectiveContentComponent } from './directives/directive-content/directive-content.component';
 import { StructuraldirectiveDirective } from './directives/structuraldirective.directive';
 import { StructuraldirectiveComponent } from './directives/structuraldirective/structuraldirective.component';
+import { HostComponent } from './host/host.component';
+import { HostelementDirective } from './host/hostelement.directive';
+import { BgColorDirective } from './host/bg-color.directive';
 
 @NgModule({
   declarations: [
@@ -93,6 +96,9 @@ import { StructuraldirectiveComponent } from './directives/structuraldirective/s
     DirectiveContentComponent,
     StructuraldirectiveDirective,
     StructuraldirectiveComponent,
+    HostComponent,
+    HostelementDirective,
+    BgColorDirective,
     
   ],
   imports: [
