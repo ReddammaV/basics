@@ -50,6 +50,8 @@ import { StructuraldirectiveComponent } from './directives/structuraldirective/s
 import { HostComponent } from './host/host.component';
 import { HostelementDirective } from './host/hostelement.directive';
 import { BgColorDirective } from './host/bg-color.directive';
+import { MyserviceComponent } from './allservices/myservice/myservice.component';
+import { ApiService } from './api.service';
 
 @NgModule({
   declarations: [
@@ -99,7 +101,8 @@ import { BgColorDirective } from './host/bg-color.directive';
     HostComponent,
     HostelementDirective,
     BgColorDirective,
-    
+    MyserviceComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -107,7 +110,7 @@ import { BgColorDirective } from './host/bg-color.directive';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
