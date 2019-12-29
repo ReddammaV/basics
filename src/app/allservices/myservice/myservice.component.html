@@ -1,0 +1,14 @@
+<p>
+  myservice works!
+</p>
+
+<!-- <input type="text" name="" [(ngModel)]="value" (keydown.enter)="save($event)"> -->
+<input type="text" name="" [(ngModel)]="value">
+<button type="button" (click)="addNum(value)">Add Value</button>
+
+<h3>Value List</h3>
+<ul>
+  <li *ngFor="let item of allNum">
+    {{ item }}
+  </li>
+</ul>

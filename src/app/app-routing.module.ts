@@ -27,6 +27,9 @@ import { ContentMainComponent } from './content-children/content-main/content-ma
 import { ContentDirectiveComponent } from './directives/content-directive/content-directive.component';
 import { StructuraldirectiveComponent } from './directives/structuraldirective/structuraldirective.component';
 import { HostComponent } from './host/host.component';
+import { MyserviceComponent } from './allservices/myservice/myservice.component';
+import { DataParentComponent } from './data/data-parent/data-parent.component';
+
 
 const routes: Routes = [
   { path: '', component: NgifComponent },
@@ -54,6 +57,8 @@ const routes: Routes = [
   { path: 'contentdirective', component: ContentDirectiveComponent },
   { path: 'structuraldirective', component: StructuraldirectiveComponent },
   { path: 'host', component: HostComponent },
+  { path: 'myservice', component: MyserviceComponent },
+  { path: 'data', component: DataParentComponent },
 ];
 
 @NgModule({
