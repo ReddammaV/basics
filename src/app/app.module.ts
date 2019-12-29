@@ -52,6 +52,8 @@ import { HostelementDirective } from './host/hostelement.directive';
 import { BgColorDirective } from './host/bg-color.directive';
 import { MyserviceComponent } from './allservices/myservice/myservice.component';
 import { ApiService } from './api.service';
+import { DataParentComponent } from './data/data-parent/data-parent.component';
+import { DataChildComponent } from './data/data-child/data-child.component';
 
 @NgModule({
   declarations: [
@@ -102,6 +104,8 @@ import { ApiService } from './api.service';
     HostelementDirective,
     BgColorDirective,
     MyserviceComponent,
+    DataParentComponent,
+    DataChildComponent,
    
   ],
   imports: [

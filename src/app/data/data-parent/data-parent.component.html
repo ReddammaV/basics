@@ -1,0 +1,22 @@
+<p>
+  data-parent works!
+</p>
+
+<!-- Input -->
+<div>
+  <h3>Input</h3>
+  {{data}}
+</div>
+
+<!-- Ouput -->
+<div>
+  <h3>Ouput</h3>
+  {{cData}}
+</div>
+
+<!-- viewChild -->
+<div>
+  <h3>View Child</h3>
+  {{dcomp.viewChild}}
+</div>
+<app-data-child [mydata]="data" (myOutput)="output($event)"></app-data-child>
