@@ -10,6 +10,8 @@ export class InputChildComponent implements OnInit  {
   // @Input() pData: string;
   @Input('pDataAlias') pData: string; // only one is accessable  @Input('pDataAlias') red: string; this will not
   @Input('formData') fData: any;
+  // array
+  @Input() array: any;
 
   // formValues = this.fData;
   formValues: any;

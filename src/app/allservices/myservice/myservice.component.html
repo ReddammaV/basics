@@ -12,3 +12,14 @@
     {{ item }}
   </li>
 </ul>
+
+<h2>Local storage</h2>
+<input type="text" name="" [(ngModel)]="array">
+<button type="button" (click)="addUser(array)">Add User</button>
+
+<h3>Users List</h3>
+<ul>
+  <li *ngFor="let item of myUsers">
+    {{ item }}
+  </li>
+</ul>

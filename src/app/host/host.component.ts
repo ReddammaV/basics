@@ -36,4 +36,22 @@ export class HostComponent implements OnInit {
   //   this.changeColor('blue');
   // }
 
+  @HostListener('click') onClick() {
+    alert("clicked");
+  }
+
+  changeColor(varColor: string){
+    // this.elref.nativeElement.style.backgroundColor = varColor;
+    this.renderer.setElementStyle(this.elref.nativeElement, 'color', varColor);
+  }
+
+  
+  @HostListener('mouseover') onmouseover() {
+    this.changeColor('violet')
+  }
+
+  @HostListener('mouseout') onmouseout() {
+    this.changeColor('cyan')
+  }
+
 }
