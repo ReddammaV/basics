@@ -10,7 +10,11 @@ export class InputParentComponent implements OnInit {
   name = 'Reddy';
   reactiveForm: FormGroup;
   formDataValues: any;
-
+  items = [
+    {name: 'Reddy', mobile: 9566042245},
+    {name: 'Aruna', mobile: 8569425698},
+    {name: 'Mohan', mobile: 7458962365},
+  ]
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {

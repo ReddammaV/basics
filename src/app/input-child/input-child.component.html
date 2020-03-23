@@ -1,6 +1,8 @@
 <h3>Child Component</h3>
 <p>{{pData}}</p>
 
+
+<!-- form -->
 <div>{{fData | json}}</div>
 <div>Name: {{fData?.fullname}}</div>
 <div>Email: {{fData?.email}}</div>
@@ -8,3 +10,11 @@
 
 
 
+
+<!-- array -->
+
+<ul>
+    <li *ngFor="let item of array">
+        {{item.name}} {{item.mobile}}
+    </li>
+</ul>
