@@ -29,6 +29,7 @@ import { StructuraldirectiveComponent } from './directives/structuraldirective/s
 import { HostComponent } from './host/host.component';
 import { MyserviceComponent } from './allservices/myservice/myservice.component';
 import { DataParentComponent } from './data/data-parent/data-parent.component';
+import { ParentComponent } from './parent/parent.component';
 
 
 const routes: Routes = [
@@ -59,6 +60,7 @@ const routes: Routes = [
   { path: 'host', component: HostComponent },
   { path: 'myservice', component: MyserviceComponent },
   { path: 'data', component: DataParentComponent },
+  { path: 'parent', component: ParentComponent },
 ];
 
 @NgModule({
